@@ -1,4 +1,4 @@
-#include <iostream>//array x=13 
+#include <iostream>
 
 int main(){
     int arr[6] = {1,11,5,4,2,8};
