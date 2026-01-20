@@ -41,11 +41,8 @@ int main()
 			    p += to_string(k) + to_string(suzz-1-k);
 			    
 
-			}
-			
-			
+			}	
 		}
-		
 		arey1[j] = count;
 		
         arey2[j] = p;
