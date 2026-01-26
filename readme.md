@@ -1,1 +1,5 @@
-Im beginner I will just use this repo to store my answers :/
+## Codeforces Solutions
+
+I'm a beginner using this repo to store my competitive programming solutions.
+
+<img src="/output/banner.png" alt="Codeforces">
