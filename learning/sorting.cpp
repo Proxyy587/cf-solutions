@@ -17,8 +17,6 @@ void selectionSort(int arr[], int n){
         arr[min] = arr[i];
         arr[i] = temp;
     }
-    
-    
 }
 
 

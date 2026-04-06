@@ -181,6 +181,20 @@ struct node* deleteall(struct node* head){
     return head;
 }
 
+struct node* reverse(struct node* head){
+    struct node* curr = NULL;
+    struct node* prev = NULL;
+
+    while(head != NULL){
+        curr = head->next;
+        head->next = prev;
+        prev = head;
+        head = curr;
+    }
+    head = prev;
+    return head;
+}
+
 int main() {
 	int arr[5] = {1, 3, 5, 2, 4};
 	int n = sizeof(arr)/sizeof(arr[0]);
@@ -199,7 +213,9 @@ int main() {
     
     // deletek(head, 2);
     
-    head = deleteall(head);
+    // head = deleteall(head);
+    
+    head = reverse(head);
 
 	int count = cnt(head);
 
