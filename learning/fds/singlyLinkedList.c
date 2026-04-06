@@ -170,7 +170,15 @@ struct node* deletek(struct node* head, int k) {
 }
 
 struct node* deleteall(struct node* head){
+    struct node* temp = head;
     
+    while(temp != NULL){
+        temp = temp->next;
+        free(head);
+        head = temp;
+    }
+    
+    return head;
 }
 
 int main() {
@@ -190,6 +198,8 @@ int main() {
 	// deletelast(head);
     
     // deletek(head, 2);
+    
+    head = deleteall(head);
 
 	int count = cnt(head);
 
