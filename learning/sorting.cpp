@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// n, n-1, n-2, ..., 2, 1
+// sum of natural numbers = n(n+1)/2
+// selection sort: O(n^2)
+
 void selectionSort(int arr[], int n){
     for(int i = 0; i <= n - 2; i++){
         int min = i;
@@ -16,6 +20,7 @@ void selectionSort(int arr[], int n){
     
     
 }
+
 
 int main() {
 	int n;
