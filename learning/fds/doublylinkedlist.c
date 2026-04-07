@@ -93,17 +93,75 @@ void print(struct node* head){
     }
 }
 
+struct node* deletefirst(struct node* head){
+    struct node* temp = head;
+    head = temp->next;
+    temp->next = NULL;
+    head->prev=NULL;
+    free(temp);
+    temp = NULL;
+    return head;
+}
+
+struct node* deletelast(struct node* head){
+    struct node* temp = head;
+    struct node* prev = head;
+    
+    while(temp->next != NULL){
+        prev = temp;
+        temp = temp->next;
+    }
+    
+    prev->next = NULL;
+    temp->prev = NULL;
+    free(temp);
+    temp = NULL;
+    
+    
+    return head;
+}
+
+struct node* deletek(struct node* head, int k){
+    struct node* temp = head;
+    struct node* ptr = NULL;
+    
+    while(k != 2){
+        temp = temp->next;
+        k--;
+    }
+    struct node* curr = temp->next;
+    
+    if(curr->next != NULL){
+        ptr = temp->next->next;
+        ptr->prev = temp;
+        temp->next = ptr;
+    }
+    else{
+        temp->next = NULL;
+    }
+    free(curr);
+    curr = NULL;
+    
+    return head;
+    
+}
+
 int main() {
 	struct node* head = NULL;
 	head = add(head, 56);
 	
 	head = addstart(head, 46);
+	
 	head = addend(head, 34);
 	head = addend(head, 14);
 	head = addend(head, 11);
-	
-	
+    
 	head = addk(head, 4, 4);
+	
+	head = deletefirst(head);
+	head = deletelast(head);
+	head = deletek(head, 2);
+	
 	
 	printf("%d\n", head->data);
 	print(head);
