@@ -37,7 +37,6 @@ int deleteMAX(){
     return val;
 }
 
-
 void display() {
     if (size == 0) { printf("Empty.\n"); return; }
     printf("Priority Queue:\n");
