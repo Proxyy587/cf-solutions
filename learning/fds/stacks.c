@@ -24,7 +24,6 @@ void push(int data){
     stack_arr[top] = data;
 }
 
-
 int pop(){
     if(isEmpty()){
         printf("Stack Underflows");
@@ -47,7 +46,6 @@ void print(){
     }
     printf("\n");
 }
-
 
 int peek(){
     if(isEmpty()){
