@@ -146,6 +146,22 @@ struct node* deletek(struct node* head, int k){
     
 }
 
+struct node* reverseDLL(struct node* head){
+    struct node* prev = NULL;
+    struct node* curr = head;
+
+    while(curr != NULL){
+        prev = curr->prev;
+        curr->prev = curr->next;
+        curr->next = prev;
+        curr = curr->prev;
+    }
+
+    head = prev;
+    return head;
+}
+
+
 int main() {
 	struct node* head = NULL;
 	head = add(head, 56);
@@ -158,10 +174,11 @@ int main() {
     
 	head = addk(head, 4, 4);
 	
-	head = deletefirst(head);
-	head = deletelast(head);
-	head = deletek(head, 2);
+	// head = deletefirst(head);
+	// head = deletelast(head);
+	// head = deletek(head, 2);
 	
+    head = reverseDLL(head);
 	
 	printf("%d\n", head->data);
 	print(head);
