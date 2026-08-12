@@ -4,7 +4,6 @@
 int stack_arr[MAX];
 int top = -1;
 
-
 int isFull(){
     if(top == MAX - 1) return 1;
     else return 0;

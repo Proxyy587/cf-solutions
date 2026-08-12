@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define MAX 5
 
-
 int queue_arr[MAX];
 int front = -1;
 int rear = -1;
@@ -20,7 +19,7 @@ void enqueue(int val){
         return;
     }
     if(isEmpty()){
-        front = 0;
+        front++;
     }
     rear++;
     queue_arr[rear] = val;
