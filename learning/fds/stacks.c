@@ -51,7 +51,6 @@ int peek(){
         printf("Stack underflow");
         return  0;
     }
-    
     return stack_arr[top];
 }
 

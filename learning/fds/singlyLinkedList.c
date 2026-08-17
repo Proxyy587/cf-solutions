@@ -81,7 +81,7 @@ struct node* insertAtk(struct node* head, int k, int data) {
 	temp->data = data;
 	temp->next = NULL;
 
-	while(k != 2) { // why this logic give all alternatives any alt easy logic to remember
+	while(k != 2) {
 		ptr = ptr->next;
 		k--;
 	}
@@ -126,7 +126,7 @@ struct node* deletelast(struct node* head) {
 
 	prev->next = NULL;
 	free(temp);
-	temp = NULL; // why do we do this
+	temp = NULL;
 
 	return head;
 }
@@ -186,7 +186,7 @@ struct node* reverse(struct node* head){
     struct node* prev = NULL;
 
     while(head != NULL){
-        curr = head->next;
+        curr = curr->next;
         head->next = prev;
         prev = head;
         head = curr;
